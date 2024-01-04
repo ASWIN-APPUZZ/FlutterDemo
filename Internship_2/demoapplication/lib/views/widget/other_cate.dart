@@ -19,7 +19,7 @@ class OtherCate extends StatelessWidget {
             child: img,
           ),
         ),
-        Text(text)
+        Text(text, style: TextStyle(fontSize: 10.0))
       ],
     );
   }

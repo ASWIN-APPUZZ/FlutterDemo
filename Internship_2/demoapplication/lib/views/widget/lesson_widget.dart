@@ -30,12 +30,12 @@ class LessonWidget extends StatelessWidget {
         Row(
           children: <Widget>[
             Expanded(
-              flex: 7,
+              flex: 8,
               child: Text(heading,style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
             Expanded(
-                flex: 3,
+                flex: 2,
                 child: Text(price, style: TextStyle(fontSize: 10.0)))
           ],
         ),

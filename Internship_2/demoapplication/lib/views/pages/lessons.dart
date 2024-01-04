@@ -33,37 +33,68 @@ class _LessonsState extends State<Lessons> {
                           icon: Icon(Icons.menu),
                           alignment: Alignment.topRight,
                         ),
-                        Text('Lessons for you', style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.blacks, fontSize: 24), textAlign: TextAlign.left,),
-                        SizedBox(height: 10.0,),
+                        Text(
+                          'Lessons for you',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: AppColors.blacks,
+                              fontSize: 24),
+                          textAlign: TextAlign.left,
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
                       ]),
-                  Text("FILTERED BY", textAlign: TextAlign.left, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.bold),),
+                  Text(
+                    "FILTERED BY",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        color: AppColors.text, fontWeight: FontWeight.bold),
+                  ),
                   Row(
                     children: [
                       AppButtons(text: "Design"),
-                      SizedBox(width: 5.0,),
-                      AppButtons( text: "Art&Craft"),
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      AppButtons(text: "Art&Craft"),
                       SizedBox(width: 5.0),
-                      AppButtons(text: "Prague", icons: Icons.location_on_outlined,),
+                      AppButtons(
+                        text: "Prague",
+                        icons: Icons.location_on_outlined,
+                      ),
                     ],
                   ),
                   Row(
                     children: [
-                      AppButtons( text: "Monday"),
+                      AppButtons(text: "Monday"),
                       SizedBox(width: 5.0),
-                      AppButtons( text: "2+ Spot"),
+                      AppButtons(text: "2+ Spot"),
                       SizedBox(width: 5.0),
-                      AppButtons( text: "300-980"),
+                      AppButtons(text: "300-980"),
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       Expanded(
                         flex: 3,
-                        child: LessonWidget(author: 'by Marian Fusek', heading: 'Best UI/UX Practices', img: Image.asset('assets/bus.png'), price: '800', status: '2/7 spots left',),
+                        child: LessonWidget(
+                          author: 'by Marian Fusek',
+                          heading: 'Best UI/UX Practices',
+                          img: Image.asset('assets/bus.png'),
+                          price: '800',
+                          status: '2/7 spots left',
+                        ),
                       ),
                       Expanded(
                         flex: 3,
-                        child: LessonWidget(author: 'by Jackson Nikon', heading: 'Illustrator Basics', img: Image.asset('assets/bus.png'), price: '450', status: '3/7 spots left',),
+                        child: LessonWidget(
+                          author: 'by Jackson Nikon',
+                          heading: 'Illustrator Basics',
+                          img: Image.asset('assets/bus.png'),
+                          price: '450',
+                          status: '3/7 spots left',
+                        ),
                       ),
                     ],
                   ),
@@ -74,11 +105,23 @@ class _LessonsState extends State<Lessons> {
                     children: <Widget>[
                       Expanded(
                         flex: 3,
-                        child:LessonWidget(author: 'by Mary Kitter', heading: 'Watercolor Basics', img: Image.asset('assets/bus.png'), price: '600', status: '4/4 spots left',),
+                        child: LessonWidget(
+                          author: 'by Mary Kitter',
+                          heading: 'Watercolor Basics',
+                          img: Image.asset('assets/bus.png'),
+                          price: '600',
+                          status: '4/4 spots left',
+                        ),
                       ),
                       Expanded(
                         flex: 3,
-                        child: LessonWidget(author: 'by Maja Everydaydraw', heading: 'Character Illustration', img: Image.asset('assets/bus.png'), price: '750', status: '2/6 spots left',),
+                        child: LessonWidget(
+                          author: 'by Maja Everydaydraw',
+                          heading: 'Character Illustration',
+                          img: Image.asset('assets/bus.png'),
+                          price: '750',
+                          status: '2/6 spots left',
+                        ),
                       ),
                     ],
                   ),
@@ -91,43 +134,66 @@ class _LessonsState extends State<Lessons> {
                     height: 20,
                   ),
                   //other cate.
-                  Text("OTHER CATEROGIES", style: TextStyle( color: AppColors.text, fontWeight: FontWeight.bold), textAlign: TextAlign.start,),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        flex: 2,
-                        child: OtherCate(img: Image.network(
-                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Business',),
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: OtherCate(img: Image.network(
-                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Cooking',)
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: OtherCate(img: Image.network(
-                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Languages',)
-                      ),
-                    ],
+                  Text(
+                    "OTHER CATEROGIES",
+                    style: TextStyle(
+                        color: AppColors.text, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.start,
                   ),
                   Row(
                     children: <Widget>[
                       Expanded(
                         flex: 2,
-                        child: OtherCate(img: Image.network(
-                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Coding',)
+                        child: OtherCate(
+                          img: Image.network(
+                              "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
+                          text: 'Business',
+                        ),
                       ),
                       Expanded(
-                        flex: 2,
-                        child: OtherCate(img: Image.network(
-                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Sports',)
-                      ),
+                          flex: 2,
+                          child: OtherCate(
+                            img: Image.network(
+                                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
+                            text: 'Cooking',
+                          )),
                       Expanded(
-                        flex: 2,
-                        child: OtherCate(img: Image.network(
-                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Self - Development',)
-                      ),
+                          flex: 2,
+                          child: OtherCate(
+                            img: Image.network(
+                                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
+                            text: 'Languages',
+                          )),
+                    ],
+                  ),
+
+                  SizedBox(
+                    height: 10.0,
+                  ),
+
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                          flex: 2,
+                          child: OtherCate(
+                            img: Image.network(
+                                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
+                            text: 'Coding',
+                          )),
+                      Expanded(
+                          flex: 2,
+                          child: OtherCate(
+                            img: Image.network(
+                                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
+                            text: 'Sports',
+                          )),
+                      Expanded(
+                          flex: 2,
+                          child: OtherCate(
+                            img: Image.network(
+                                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
+                            text: 'Self - Development',
+                          )),
                     ],
                   ),
                 ],

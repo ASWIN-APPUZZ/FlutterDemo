@@ -1,6 +1,5 @@
 import 'package:demoapplication/views/bottom_nav.dart';
 import 'package:flutter/material.dart';
-import './views/pages/home.dart';
 
 void main() {
   runApp(const MyApp());
