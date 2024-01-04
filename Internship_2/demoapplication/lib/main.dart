@@ -1,3 +1,4 @@
+import 'package:demoapplication/views/bottom_nav.dart';
 import 'package:flutter/material.dart';
 import './views/pages/home.dart';
 
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: NavigationExample()
+      // home: NavigationExample()
+       home: BottomPage()
+
     );
   }
 }
