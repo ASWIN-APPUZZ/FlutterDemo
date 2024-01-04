@@ -1,11 +1,6 @@
-import 'package:demoapplication/views/widget/button_Art&Craft.dart';
-import 'package:demoapplication/views/widget/button_design.dart';
+import 'package:demoapplication/views/widget/app_buttons.dart';
 import 'package:flutter/material.dart';
 import '../../src/core/colors/colors.dart';
-import '../widget/button_monday.dart';
-import '../widget/button_spot.dart';
-import '../widget/button_suggession.dart';
-import '../widget/buttonprague.dart';
 import '../widget/lesson_widget.dart';
 import '../widget/other_cate.dart';
 
@@ -44,31 +39,31 @@ class _LessonsState extends State<Lessons> {
                   Text("FILTERED BY", textAlign: TextAlign.left, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.bold),),
                   Row(
                     children: [
-                      ButtonDesign(),
+                      AppButtons(text: "Design"),
                       SizedBox(width: 5.0,),
-                      ButtonArt(),
+                      AppButtons( text: "Art&Craft"),
                       SizedBox(width: 5.0),
-                      ButtonPrague()
+                      AppButtons(text: "Prague", icons: Icons.location_on_outlined,),
                     ],
                   ),
                   Row(
                     children: [
-                      ButtonMonday(),
+                      AppButtons( text: "Monday"),
                       SizedBox(width: 5.0),
-                      ButtonSpot(),
+                      AppButtons( text: "2+ Spot"),
                       SizedBox(width: 5.0),
-                      ButtonSuggession()
+                      AppButtons( text: "300-980"),
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       Expanded(
                         flex: 3,
-                        child: LessonWidget(),
+                        child: LessonWidget(author: 'by Marian Fusek', heading: 'Best UI/UX Practices', img: Image.asset('assets/bus.png'), price: '800', status: '2/7 spots left',),
                       ),
                       Expanded(
                         flex: 3,
-                        child: LessonWidget()
+                        child: LessonWidget(author: 'by Jackson Nikon', heading: 'Illustrator Basics', img: Image.asset('assets/bus.png'), price: '450', status: '3/7 spots left',),
                       ),
                     ],
                   ),
@@ -79,11 +74,11 @@ class _LessonsState extends State<Lessons> {
                     children: <Widget>[
                       Expanded(
                         flex: 3,
-                        child: LessonWidget()
+                        child:LessonWidget(author: 'by Mary Kitter', heading: 'Watercolor Basics', img: Image.asset('assets/bus.png'), price: '600', status: '4/4 spots left',),
                       ),
                       Expanded(
                         flex: 3,
-                        child: LessonWidget()
+                        child: LessonWidget(author: 'by Maja Everydaydraw', heading: 'Character Illustration', img: Image.asset('assets/bus.png'), price: '750', status: '2/6 spots left',),
                       ),
                     ],
                   ),
@@ -101,15 +96,18 @@ class _LessonsState extends State<Lessons> {
                     children: <Widget>[
                       Expanded(
                         flex: 2,
-                        child: OtherCate(),
+                        child: OtherCate(img: Image.network(
+                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Business',),
                       ),
                       Expanded(
                         flex: 2,
-                        child: OtherCate()
+                        child: OtherCate(img: Image.network(
+                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Cooking',)
                       ),
                       Expanded(
                         flex: 2,
-                        child: OtherCate()
+                        child: OtherCate(img: Image.network(
+                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Languages',)
                       ),
                     ],
                   ),
@@ -117,15 +115,18 @@ class _LessonsState extends State<Lessons> {
                     children: <Widget>[
                       Expanded(
                         flex: 2,
-                        child: OtherCate()
+                        child: OtherCate(img: Image.network(
+                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Coding',)
                       ),
                       Expanded(
                         flex: 2,
-                        child: OtherCate()
+                        child: OtherCate(img: Image.network(
+                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Sports',)
                       ),
                       Expanded(
                         flex: 2,
-                        child: OtherCate()
+                        child: OtherCate(img: Image.network(
+                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"), text: 'Self - Development',)
                       ),
                     ],
                   ),

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
 class OtherCate extends StatelessWidget {
-  const OtherCate({
-    super.key,
+  final Image img;
+  final String text;
+
+  OtherCate({
+    super.key, 
+    required this.img, 
+    required this.text,
   });
 
   @override
@@ -11,11 +16,10 @@ class OtherCate extends StatelessWidget {
       children: [
         Card(
           child: SizedBox(
-            child: Image.network(
-                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
+            child: img,
           ),
         ),
-        Text("data")
+        Text(text)
       ],
     );
   }
