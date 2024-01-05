@@ -1,10 +1,10 @@
 import 'package:demoapplication/views/widget/app_buttons.dart';
 import 'package:flutter/material.dart';
 import '../../src/core/colors/colors.dart';
-import '../widget/heading.dart';
+import '../widget/heading_widget.dart';
 import '../widget/lesson_widget.dart';
 import '../widget/other_cate.dart';
-import '../widget/subhead.dart';
+import '../widget/subhead_widget.dart';
 
 class Lessons extends StatefulWidget {
   const Lessons({super.key});
@@ -16,6 +16,7 @@ class _LessonsState extends State<Lessons> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // MARK:- Body
       body: SafeArea(
         child: Card(
           shadowColor: AppColors.shadow,
@@ -27,6 +28,7 @@ class _LessonsState extends State<Lessons> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Padding(padding: EdgeInsets.all(8.0)),
+                  //MARK:- Headings
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
@@ -40,13 +42,13 @@ class _LessonsState extends State<Lessons> {
                           height: 10.0,
                         ),
                       ]),
+                      //MARK:- Sub
                   SubHeading(text: 'FILTERED BY'),
+                  //MARK:- Buttons
                   Row(
                     children: [
                       AppButtons(text: "Design"),
-                      SizedBox(
-                        width: 5.0,
-                      ),
+                      SizedBox( width: 5.0, ),
                       AppButtons(text: "Art&Craft"),
                       SizedBox(width: 5.0),
                       AppButtons(
@@ -64,6 +66,7 @@ class _LessonsState extends State<Lessons> {
                       AppButtons(text: "300-980"),
                     ],
                   ),
+                  //MARK:- Lessons
                   Row(
                     children: <Widget>[
                       Expanded(
@@ -118,12 +121,14 @@ class _LessonsState extends State<Lessons> {
                   SizedBox(
                     height: 20,
                   ),
+                  //MARK:- Button
                   AppButtons(text: 'See All Lessons'),
                   SizedBox(
                     height: 20,
                   ),
-                  //other cate.
+                  //MARK:- Other Categories
                   SubHeading(text: 'OTHER CATEROGIES',),
+                  //MARK:- Category cards
                   Row(
                     children: <Widget>[
                       Expanded(
