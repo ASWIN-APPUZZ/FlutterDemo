@@ -1,8 +1,10 @@
 import 'package:demoapplication/views/widget/app_buttons.dart';
 import 'package:flutter/material.dart';
 import '../../src/core/colors/colors.dart';
+import '../widget/heading.dart';
 import '../widget/lesson_widget.dart';
 import '../widget/other_cate.dart';
+import '../widget/subhead.dart';
 
 class Lessons extends StatefulWidget {
   const Lessons({super.key});
@@ -33,24 +35,12 @@ class _LessonsState extends State<Lessons> {
                           icon: Icon(Icons.menu),
                           alignment: Alignment.topRight,
                         ),
-                        Text(
-                          'Lessons for you',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.blacks,
-                              fontSize: 24),
-                          textAlign: TextAlign.left,
-                        ),
+                        Heading(text: 'Lessons for you',),
                         SizedBox(
                           height: 10.0,
                         ),
                       ]),
-                  Text(
-                    "FILTERED BY",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                        color: AppColors.text, fontWeight: FontWeight.bold),
-                  ),
+                  SubHeading(text: 'FILTERED BY'),
                   Row(
                     children: [
                       AppButtons(text: "Design"),
@@ -128,18 +118,12 @@ class _LessonsState extends State<Lessons> {
                   SizedBox(
                     height: 20,
                   ),
-                  ElevatedButton(
-                      onPressed: () {}, child: Text("See All Lessons")),
+                  AppButtons(text: 'See All Lessons'),
                   SizedBox(
                     height: 20,
                   ),
                   //other cate.
-                  Text(
-                    "OTHER CATEROGIES",
-                    style: TextStyle(
-                        color: AppColors.text, fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.start,
-                  ),
+                  SubHeading(text: 'OTHER CATEROGIES',),
                   Row(
                     children: <Widget>[
                       Expanded(
