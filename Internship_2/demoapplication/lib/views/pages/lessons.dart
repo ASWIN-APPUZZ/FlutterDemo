@@ -19,7 +19,7 @@ class _LessonsState extends State<Lessons> {
       // MARK:- Body
       body: SafeArea(
         child: Card(
-          shadowColor: AppColors.shadow,
+          shadowColor: const Color.fromARGB(0, 0, 0, 0),
           margin: const EdgeInsets.all(8.0),
           child: SizedBox(
             child: SingleChildScrollView(
@@ -38,153 +38,23 @@ class _LessonsState extends State<Lessons> {
                           alignment: Alignment.topRight,
                         ),
                         Heading(text: 'Lessons for you',),
-                        SizedBox(
-                          height: 10.0,
-                        ),
+                        SizedBox(height: 10.0,),
                       ]),
-                      //MARK:- Sub
+                  //MARK:- Sub
                   SubHeading(text: 'FILTERED BY'),
                   //MARK:- Buttons
-                  Row(
-                    children: [
-                      AppButtons(text: "Design"),
-                      SizedBox( width: 5.0, ),
-                      AppButtons(text: "Art&Craft"),
-                      SizedBox(width: 5.0),
-                      AppButtons(
-                        text: "Prague",
-                        icons: Icons.location_on_outlined,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      AppButtons(text: "Monday"),
-                      SizedBox(width: 5.0),
-                      AppButtons(text: "2+ Spot"),
-                      SizedBox(width: 5.0),
-                      AppButtons(text: "300-980"),
-                    ],
-                  ),
+                  AppButtons(),
                   //MARK:- Lessons
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        flex: 3,
-                        child: LessonWidget(
-                          author: 'by Marian Fusek',
-                          heading: 'Best UI/UX Practices',
-                          img: Image.asset('assets/bus.png'),
-                          price: '800',
-                          status: '2/7 spots left',
-                        ),
-                      ),
-                      Expanded(
-                        flex: 3,
-                        child: LessonWidget(
-                          author: 'by Jackson Nikon',
-                          heading: 'Illustrator Basics',
-                          img: Image.asset('assets/bus.png'),
-                          price: '450',
-                          status: '3/7 spots left',
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 12.0,
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        flex: 3,
-                        child: LessonWidget(
-                          author: 'by Mary Kitter',
-                          heading: 'Watercolor Basics',
-                          img: Image.asset('assets/bus.png'),
-                          price: '600',
-                          status: '4/4 spots left',
-                        ),
-                      ),
-                      Expanded(
-                        flex: 3,
-                        child: LessonWidget(
-                          author: 'by Maja Everydaydraw',
-                          heading: 'Character Illustration',
-                          img: Image.asset('assets/bus.png'),
-                          price: '750',
-                          status: '2/6 spots left',
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
+                  LessonWidget(),
+                  SizedBox(height: 20),
                   //MARK:- Button
-                  AppButtons(text: 'See All Lessons'),
-                  SizedBox(
-                    height: 20,
-                  ),
+                  TextButton(onPressed: (){}, child: Text("See all lessons",), style: TextButton.styleFrom(backgroundColor: AppColors.blues, elevation: 5, foregroundColor: AppColors.whites),),
+                  const SizedBox(height: 20),
                   //MARK:- Other Categories
-                  SubHeading(text: 'OTHER CATEROGIES',),
+                  SubHeading(text: 'OTHER CATEROGIES'),
                   //MARK:- Category cards
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        flex: 2,
-                        child: OtherCate(
-                          img: Image.network(
-                              "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
-                          text: 'Business',
-                        ),
-                      ),
-                      Expanded(
-                          flex: 2,
-                          child: OtherCate(
-                            img: Image.network(
-                                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
-                            text: 'Cooking',
-                          )),
-                      Expanded(
-                          flex: 2,
-                          child: OtherCate(
-                            img: Image.network(
-                                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
-                            text: 'Languages',
-                          )),
-                    ],
-                  ),
-
-                  SizedBox(
-                    height: 10.0,
-                  ),
-
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                          flex: 2,
-                          child: OtherCate(
-                            img: Image.network(
-                                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
-                            text: 'Coding',
-                          )),
-                      Expanded(
-                          flex: 2,
-                          child: OtherCate(
-                            img: Image.network(
-                                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
-                            text: 'Sports',
-                          )),
-                      Expanded(
-                          flex: 2,
-                          child: OtherCate(
-                            img: Image.network(
-                                "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-mark-arron-smith-2251798.jpg&fm=jpg"),
-                            text: 'Self - Development',
-                          )),
-                    ],
-                  ),
+                  Container(child: OtherCate()),
+                  SizedBox(height: 20,),
                 ],
               ),
             ),

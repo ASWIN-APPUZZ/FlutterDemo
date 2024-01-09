@@ -14,7 +14,10 @@ class BottomPage extends StatefulWidget {
 class _BottomPageState extends State<BottomPage> {
   int currentState = 0;
 
-  final _pages = [Lessons(), Schedule(), Messages(), Profile()];
+  final _pages = [
+    // LessonsGrid(),
+    Lessons(),
+   Schedule(), Messages(), Profile()];
   @override
   Widget build(BuildContext context) {
      final ThemeData theme = Theme.of(context);
