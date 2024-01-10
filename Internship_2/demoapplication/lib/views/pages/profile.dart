@@ -1,3 +1,4 @@
+import 'package:demoapplication/src/core/constants/strings.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatefulWidget {
@@ -18,7 +19,7 @@ class _ProfileState extends State<Profile> {
           child: SizedBox.expand(
             child: Center(
               child: Text(
-                'Profile',
+                Strings.profile,
                 style: theme.textTheme.titleLarge,
               ),
             ),

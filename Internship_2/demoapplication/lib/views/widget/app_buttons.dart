@@ -33,8 +33,6 @@ class AppButtons extends StatelessWidget {
             child: ElevatedButton(
                 onPressed: () {}, child: Text(appbutton[index].text)),
           );
-        },
-      ),
-    );
+        }));
   }
 }

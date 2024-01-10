@@ -1,3 +1,4 @@
+import 'package:demoapplication/src/core/constants/strings.dart';
 import 'package:demoapplication/views/pages/lessons.dart';
 import 'package:demoapplication/views/pages/messages.dart';
 import 'package:demoapplication/views/pages/profile.dart';
@@ -35,10 +36,10 @@ class _BottomPageState extends State<BottomPage> {
         selectedItemColor: Colors.blue,
         // fixedColor: Colors.blue,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Lessons"),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_month_outlined), label: "Schedule"),
-          BottomNavigationBarItem(icon: Icon(Icons.chat_bubble_outline), label: "Messages"),
-          BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: "Profile")
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: Strings.lesson),
+          BottomNavigationBarItem(icon: Icon(Icons.calendar_month_outlined), label: Strings.schedule),
+          BottomNavigationBarItem(icon: Icon(Icons.chat_bubble_outline), label: Strings.msg),
+          BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: Strings.profile)
         ],
       ),
     );

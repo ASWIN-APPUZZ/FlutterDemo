@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../src/core/colors/colors.dart';
 
 class SubHeading extends StatelessWidget {
